@@ -110,9 +110,9 @@ if (function_exists('is_https') && is_https()) {
 	);
 	// End of Content Security Policy rules
 
-	header('Permissions-Policy: interest-cohort=(), autoplay=(self), camera=(self), fullscreen=*, geolocation=(self), microphone=(self), payment=()');
-	header('Referrer-Policy: strict-origin-when-cross-origin');
 	// This is set by nginx
+	// header('Permissions-Policy: interest-cohort=(), autoplay=(self), camera=(self), fullscreen=*, geolocation=(self), microphone=(self), payment=()');
+	// header('Referrer-Policy: strict-origin-when-cross-origin');
 	// header('Strict-Transport-Security: max-age=15552000; includeSubDomains');
 	// header('Cross-Origin-Embedder-Policy: unsafe-none');
     // header('Cross-Origin-Opener-Policy: same-origin-allow-popups');
