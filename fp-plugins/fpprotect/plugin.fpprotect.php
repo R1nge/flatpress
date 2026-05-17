@@ -112,7 +112,8 @@ if (function_exists('is_https') && is_https()) {
 
 	header('Permissions-Policy: interest-cohort=(), autoplay=(self), camera=(self), fullscreen=*, geolocation=(self), microphone=(self), payment=()');
 	header('Referrer-Policy: strict-origin-when-cross-origin');
-	header('Strict-Transport-Security: max-age=15552000; includeSubDomains');
+	# This is set by nginx
+	#header('Strict-Transport-Security: max-age=15552000; includeSubDomains');
 	header('Cross-Origin-Embedder-Policy: unsafe-none');
 	header('Cross-Origin-Opener-Policy: same-origin-allow-popups');
 	header('Cross-Origin-Resource-Policy: same-site');
@@ -142,7 +143,7 @@ if (function_exists('is_https') && is_https()) {
 if (PHP_SAPI !== 'cli' && !headers_sent()) {
 	header_remove('X-Powered-By'); // Hide server information
 	header_remove('Server');
-	header('Server: FlatPress');
+	header('Server: Kasane Teto');
 }
 
 /**
